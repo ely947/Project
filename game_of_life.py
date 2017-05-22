@@ -1,23 +1,110 @@
-lets_play = raw_input("Are you ready to play the game of Alice's life? ")
+import text_file_for_game_of_life 
 
-if lets_play == "yes":
-	print "Wahoo! Get ready for a wild ride!"
+def show_menu(questions,options):
+	return options.values()
+	return options.keys()
+	print options;
+
+
+# questions = raw_input("Where do you want to start? ")
+
+# options = { 
+# 	"A" : "Traveling experiences",
+# 	"B" : "Career decisions",
+# 	"C" : "Extracurricular activities",
+# 	"D" : "Nevermind, I don't want to play right now"
 	
-	tech_or_npo = raw_input("One of Alice's first big decisions was whether to seek out a job in the non-profit sector or in tech. Which did she choose? ")
+# }
+
+intro = show_menu(INTRO_QUESTION,INTRO_OPTIONS)
+
+
+
+
+# lets_play = raw_input("Are you ready to play the game of Alice's life? ")
+
+# if lets_play == "yes":
+# 	print ("Welcome to the game of Alice's life. The object of the game is to "
+# 	"get to know Alice a little better and have fun. ")
 	
-	if tech_or_npo == "tech":
-		print "Yep! I choose tech because I believed I could make a more sustainable impact by working at a social innovation company rather than being reliant on the charity of others to improve the world."
-		
-		sales_or_product = raw_input("After working as an account manager for a couple of years, I began doing project management work on the side. When one of the sales managers left, I was given the opportunity to move into her role. Project management was closer to the technical side of the business while the other opportunity was a promotion within the sales org. Which did I choose? ")
+# 	while True:
+# 		main_menu = raw_input("Where do you want to start?\n"
 
-		if sales_or_product == "sales":
-			print "No way jose. I quickly got bored of the sales aspect of my job. While I loved working with customers, I didn't feel I was intellectually stimulated. Learning about product, design and engineering, on the other hand, was always exciting to me. In my project management role I took over the QA and feedback process. I investigated bugs, listened to customers, and organized bugs and feedback in a way that encouraged action. Instead of providing lip service, I finally felt like I could make a difference for the customer. "
-		else:
-			print "You're right! In my product management role, I took over the QA and feedback process. I investigated bugs, listened to customers, and organized bugs and feedback in a way that encouraged action. Instead of providing lip service, I finally felt like I could make a difference for the customer."
+# 		"A. Traveling experiences\n"
+# 		"B. Career decisions\n"
+# 		"C. Extracurricular activities\n"
+# 		"D. Nevermind, I don't want to play right now\n"
 
-	else:
-		print "No. I decided against pursuing a career in the nonprofit industry because many nonprofit positions are focused on raising money. I hate money, and I especially hate asking for it!"
-else:
-	print "Bummer. Maybe next time!"
+# 		)
+# 		if  main_menu == "D":
+# 			break
+	
+# 		elif main_menu == "A":
+# 			traveling_menu = raw_input("""Awesome! I've been lucky to have some
+# amazing traveling experiences, which do you want to learn more about?
+
+# 				1. Volunteering in Ghana
+# 				2. Studying in Prague
+# 				3. Teaching in Thailand 
+# 				4. Opps, I made the wrong choice, take me back to the main menu
+
+# 				""")
+
+# 			if traveling_menu == "1":
+# 				print """Cool! Let me tell you about Ghana..."""
+
+# 			elif traveling_menu == "2":
+# 				print """Prague! Where to begin..."""
+
+# 			elif traveling_menu == "3":
+# 				print """Thailand! Such a beautiful place"""
+
+# 			else:
+# 				main_menu
+
+# 		elif main_menu == "B":
+# 			career_menu = raw_input("""/nWork, work, work, work, work. What choice do you want to
+# 				dive into?
+
+# 				1. To teach or not to teach
+# 				2. Nonprofit or tech
+# 				3. Product vs. sales
+
+# 				""")
+
+# 			if career_menu == "1":
+# 				print """Learning to teach the hard way..."""
+
+# 			elif career_menu == "2":
+# 				print """Finding a job where you can give back and have intellectual stimulation."""
+
+# 			elif career_menu == "3":
+# 				print """Getting sold on product"""
+
+# 			else:
+# 				main_menu
+
+# 		elif main_menu == "C":
+# 			extracurricular_menu = raw_input("""These are a few of my favorite things! Which do you want
+# 				to know more about?
+
+# 				1. Big Brothers Big Sisters
+# 				2. Women's rights
+# 				3. Product vs. sales
+
+# 				""")
+
+# 			if extracurricular_menu == "1":
+# 				print """Envee is the coolest chick you'll ever meet."""
+
+# 			elif extracurricular_menu == "2":
+# 				print """I'm from a family of four women. I'm a proud feminist!"""
+
+# 			elif extracurricular_menu == "3":
+# 				print """Coding is how I made this game!"""
+
+# 			else:
+# 				main_menu
+
 
 	
