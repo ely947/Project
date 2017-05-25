@@ -1,24 +1,44 @@
-import text_file_for_game_of_life 
+from gol import GOL_DICTIONARY
 
-def show_menu(questions,options):
-	return options.values()
-	return options.keys()
-	print options;
+def show_topic(question,options_dictionary):
+	"""Prints the question, and options"""
+	print question
+	for option in sorted(options_dictionary):
+		print option, options_dictionary[option]
 
+def get_next_topic(topic, sub_topic):
+	user_input = raw_input(">> ").upper()
+	return GOL_DICTIONARY["INTRO"]["Options"][user_input].upper()
 
-# questions = raw_input("Where do you want to start? ")
+def get_answer_key():
+	user_input = raw_input(">> ").upper()
+	return user_input
 
-# options = { 
-# 	"A" : "Traveling experiences",
-# 	"B" : "Career decisions",
-# 	"C" : "Extracurricular activities",
-# 	"D" : "Nevermind, I don't want to play right now"
-	
-# }
+def keep_going():
+	keep_going_input = raw_input("Do you want to play again? ").lower()
+	if keep_going_input == "yes":
+		return True
+	else:
+		print "Bye Felicia!"
+		return False
 
-intro = show_menu(INTRO_QUESTION,INTRO_OPTIONS)
+print "Welcome to the game of life! The goal of the game is to get to know Alice a little better."
+topic = "INTRO"
+sub_topic = "Options"
 
-
+while True:
+	show_topic("What are you interested in learning about?", GOL_DICTIONARY[topic][sub_topic])
+	topic = get_next_topic(topic, sub_topic)
+	sub_topic = "Options"
+	show_topic("Awesome! What would you like to know about that topic?", GOL_DICTIONARY[topic][sub_topic])
+	answer_key = get_answer_key()
+	print(GOL_DICTIONARY[topic]['Answers'][answer_key])
+	if keep_going() == True:
+		topic = "INTRO"
+		sub_topic = "Options"
+		continue
+	else:
+		break
 
 
 # lets_play = raw_input("Are you ready to play the game of Alice's life? ")
@@ -88,23 +108,23 @@ intro = show_menu(INTRO_QUESTION,INTRO_OPTIONS)
 # 			extracurricular_menu = raw_input("""These are a few of my favorite things! Which do you want
 # 				to know more about?
 
-# 				1. Big Brothers Big Sisters
-# 				2. Women's rights
-# 				3. Product vs. sales
+# # 				1. Big Brothers Big Sisters
+# # 				2. Women's rights
+# # 				3. Product vs. sales
 
-# 				""")
+# # 				""")
 
-# 			if extracurricular_menu == "1":
-# 				print """Envee is the coolest chick you'll ever meet."""
+# # 			if extracurricular_menu == "1":
+# # 				print """Envee is the coolest chick you'll ever meet."""
 
-# 			elif extracurricular_menu == "2":
-# 				print """I'm from a family of four women. I'm a proud feminist!"""
+# # 			elif extracurricular_menu == "2":
+# # 				print """I'm from a family of four women. I'm a proud feminist!"""
 
-# 			elif extracurricular_menu == "3":
-# 				print """Coding is how I made this game!"""
+# # 			elif extracurricular_menu == "3":
+# # 				print """Coding is how I made this game!"""
 
-# 			else:
-# 				main_menu
+# # 			else:
+# # 				main_menu
 
 
 	
